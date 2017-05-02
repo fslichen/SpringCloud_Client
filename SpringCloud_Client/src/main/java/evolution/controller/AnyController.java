@@ -1,11 +1,13 @@
 package evolution.controller;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import evolution.util.Sys;
 
+@RefreshScope// Pull updated values from the spring cloud server.
 @RestController
 public class AnyController {
 	// This property is provided by spring cloud config server.
